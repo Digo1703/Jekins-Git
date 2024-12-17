@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Hello World'
                 echo "Build number is ${currentBuild.number}"
+                echo "Build name is ${build_display_name.name"
             }
         }
     }
