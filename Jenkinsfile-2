@@ -18,6 +18,8 @@ pipeline {
         }
     }
     post {
-        always currentBuild.currentResult
+        always{
+            currentBuild.currentResult
+        }
     }
 }
