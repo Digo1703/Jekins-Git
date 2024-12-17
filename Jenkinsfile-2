@@ -9,7 +9,7 @@ pipeline {
                 echo "Build name is ${currentBuild.displayName}"
             }
             post {
-                sucess{
+                success{
                     script{
                         currentBuild.result = 'FAILURE'
                     }
