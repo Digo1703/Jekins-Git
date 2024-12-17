@@ -8,6 +8,16 @@ pipeline {
                 echo "Build number is ${currentBuild.number}"
                 echo "Build name is ${currentBuild.displayName}"
             }
+            post {
+                sucess{
+                    script{
+                        currentBuild.result = 'FAILURE'
+                    }
+                }
+            }
         }
+    }
+    post {
+        always currentBuild.currentResult
     }
 }
